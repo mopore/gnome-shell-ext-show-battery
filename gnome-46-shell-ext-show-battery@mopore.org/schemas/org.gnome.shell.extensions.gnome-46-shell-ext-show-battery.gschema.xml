@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.gnome-46-shell-ext-show-battery" path="/org/gnome/shell/extensions/gnome-46-shell-ext-show-battery/">
+    <key name="show-indicator" type="b">
+      <default>true</default>
+    </key>
+    <key name="bat-info-path" type="s">
+      <default>"/home/jni/arch_share/virt_machine/jni_ext/battery_level_percent.txt"</default>
+    </key>
+  </schema>
+</schemalist>
