@@ -29,23 +29,24 @@ export default class ShowBatLevelExtension extends Extension {
         });
         this._buttonMenu.add_child(this._buttonMenuLabel);
 
+        Main.panel.addToStatusArea(this.uuid, this._buttonMenu);
+
         // Instead of adding our extension to the status area, we want to have
         // it placed in its own section near to the date menu.
         //
-        // Otherwise, we could have used:
-        // Main.panel.addToStatusArea(this.uuid, this._indicator);
-        try {
-            const dateMenu = Main.panel.statusArea.dateMenu;
-            const parentContainer = dateMenu.container.get_parent(); // Correct method to get parent
-            const allPanels = parentContainer.get_children();
-            const dateMenuIndex = allPanels.indexOf(dateMenu.container);
-            parentContainer.insert_child_at_index(this._buttonMenu.container, dateMenuIndex + 1); // Correct insertion
-        }
-        catch (e) {
-            const errMsg = 'Failed to add indicator to date menu: ' + e;
-            console.error(errMsg);
-            console.trace();
-        }
+        //
+        // try {
+        //     const dateMenu = Main.panel.statusArea.dateMenu;
+        //     const parentContainer = dateMenu.container.get_parent(); // Correct method to get parent
+        //     const allPanels = parentContainer.get_children();
+        //     const dateMenuIndex = allPanels.indexOf(dateMenu.container);
+        //     parentContainer.insert_child_at_index(this._buttonMenu.container, dateMenuIndex + 1); // Correct insertion
+        // }
+        // catch (e) {
+        //     const errMsg = 'Failed to add indicator to date menu: ' + e;
+        //     console.error(errMsg);
+        //     console.trace();
+        // }
 
         // Add a menu item to open the preferences window
         this._buttonMenu.menu.addAction(_('Preferences'), () => this.openPreferences() );
