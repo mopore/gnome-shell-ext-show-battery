@@ -7,6 +7,8 @@
                                                                               
 ```
 
+<img width="657" alt="screenhot" src="https://github.com/mopore/gnome-46-shell-ext-show-battery/assets/56848419/75344a59-d96c-4ce2-ab53-929682adebee">
+
 This project solves to problem to see the battery level of a MacOS laptop from 
 inside a VM which runs with Gnome 46.
 
