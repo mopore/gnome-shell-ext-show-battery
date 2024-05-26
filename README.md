@@ -6,29 +6,33 @@
 |____/ \__,_|\__| |_____\___| \_/ \___|_| |____/|_| |_|\___/ \_/\_/ \___|_|   
                                                                               
 ```
-This is a Gnome 46 shell extension to show the content of a file which is 
-meant to hold the current level of the battery. The Use Case ist to have this
-extension installed in a Gnome environment inside a VM which does not have
-direct access to the host's battery level.
 
-## Setup
-This extension needs to be placed under the following directory:
-```bash
-~/.local/share/gnome-shell/extensions/
-```
+This project solves to problem to see the battery level of a MacOS laptop from 
+inside a VM which runs with Gnome 46.
 
-## Change entry for settings / preferences
-To Make changes on the preferences/settings available the schema under "schemas"
-needs to be recompiled with:
-```bash
-glib-compile-schemas schemas
-```
+The project contains of two parts.
+- A Go-based user agent to provide the battery level
+- A Gnome extension for displaying
 
-## GTK Widget Gallery
-https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/widget-gallery.html
+As of 2024-05 showing the hosts's battery level is not yet supported with 
+UTM/qemu. For the communication a simple file is used which needs to be 
+accessible from both the MacOS host and the Gnome 46 shell.
 
+Per default the file is expected to be at the following location: 
+`/home/jni/arch_share/virt_machine/jni_ext/battery_level_percent.txt`
 
-## Check the Gnome Shell log
-```bash
-journalctl -f -o cat /usr/bin/gnome-shell
-```
+## Shell Extension
+The Gnome 46 shell extension is to show the content of a file which is meant to hold
+the current level of the laptop's battery.
+For more details see the README.md in the corresponding directory.
+For the Shell Extension there is an install in the root directory and the
+option to set the file path from the extension's settings.
+
+## User Agent / Go Program
+The Go based user agent propagates the battery level every minute with a MacOS
+user agent to the file (on the host).
+Use the correspinding installer.
+
+For changing the path you might want to change the installer script and 
+the source code file `main.go`.
+

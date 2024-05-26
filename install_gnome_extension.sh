@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+printf "This will install the extension on your Gnome-base system and \n"
+printf "you will manually have enable it an reload the shell\n\n"
+read -p "Do you want to continue? [y/N] " response
+if [[ ! "$response" =~ ^[Yy]$ ]];
+then
+    echo "Exiting..."
+    exit 1
+fi
+
 GNOME_EXTENSION_NAME="gnome-46-shell-ext-show-battery@mopore.org"
 
 rm -rf "$HOME"/.local/share/gnome-shell/extensions/"$GNOME_EXTENSION_NAME"
