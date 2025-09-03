@@ -6,10 +6,15 @@
 |____/ \__,_|\__| |_____\___| \_/ \___|_| |____/|_| |_|\___/ \_/\_/ \___|_|   
                                                                               
 ```
-This is a Gnome 46 shell extension to show the content of a file which is 
+This is a Gnome shell extension to show the content of a file which is 
 meant to hold the current level of the battery. The Use Case ist to have this
 extension installed in a Gnome environment inside a VM which does not have
 direct access to the host's battery level.
+
+## Compatibility
+This extension is compatible with Gnome versions 46, 47 and 48 (as of September
+2025). The compability can be set in `${project_root}/metadata.json` in the 
+property "shell-version".
 
 ## Setup
 This extension needs to be placed under the following directory:

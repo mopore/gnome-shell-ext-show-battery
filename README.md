@@ -24,11 +24,11 @@ Per default the file is expected to be at the following location:
 `/home/jni/arch_share/virt_machine/jni_ext/battery_level_percent.txt`
 
 ## Shell Extension
-The Gnome 46 shell extension is to show the content of a file which is meant to hold
+The Gnome shell extension is to show the content of a file which is meant to hold
 the current level of the laptop's battery.
 For more details see the README.md in the corresponding directory.
-For the Shell Extension there is an install in the root directory and the
-option to set the file path from the extension's settings.
+For the Shell Extension there is an install script (`install_gnome_extension.sh`) in 
+the root directory and the option to set the file path from the extension's settings.
 
 ## User Agent / Go Program
 The Go based user agent propagates the battery level every minute with a MacOS
