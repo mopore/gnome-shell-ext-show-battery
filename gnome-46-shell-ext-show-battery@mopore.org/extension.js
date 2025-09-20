@@ -98,6 +98,8 @@ export default class ShowBatLevelExtension extends Extension {
                     let [success, contents] = f.load_contents_finish(res);
                     if (success) {
                         const newText = `${new TextDecoder().decode(contents).trim()}%`;
+                        // TODO Make the pre and postfix configurable
+                        // const newText = `${new TextDecoder().decode(contents).trim()}%`;
                         this._buttonMenuLabel.set_text(newText);
                     } else {
                         this._buttonMenuLabel.set_text('n/a');
