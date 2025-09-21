@@ -10,7 +10,7 @@ then
     exit 1
 fi
 
-GNOME_EXTENSION_NAME="gnome-46-shell-ext-show-battery@mopore.org"
+GNOME_EXTENSION_NAME="gnome-shell-ext-show-battery@mopore.org"
 
 rm -rf "$HOME"/.local/share/gnome-shell/extensions/"$GNOME_EXTENSION_NAME"
 cp -rv "$GNOME_EXTENSION_NAME" "$HOME"/.local/share/gnome-shell/extensions/"$GNOME_EXTENSION_NAME"

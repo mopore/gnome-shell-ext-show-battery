@@ -1,0 +1,14 @@
+{
+  "name": "Show Host's Battery Level",
+  "description": "Gome shell extension to show the battery level read from host-shared file in qemu virtualized environment.",
+  "uuid": "gnome-shell-ext-show-battery@mopore.org",
+  "shell-version": [
+    "46",
+    "47",
+    "48",
+    "49"
+  ],
+  "url": "https://github.com/mopore/gnome-shell-ext-show-battery",
+  "gettext-domain": "gnome-shell-ext-show-battery@mopore.org",
+  "settings-schema": "org.gnome.shell.extensions.gnome-shell-ext-show-battery"
+}

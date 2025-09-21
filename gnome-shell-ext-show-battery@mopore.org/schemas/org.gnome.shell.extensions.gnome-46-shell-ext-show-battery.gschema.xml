@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.gnome.shell.extensions.gnome-46-shell-ext-show-battery" path="/org/gnome/shell/extensions/gnome-46-shell-ext-show-battery/">
+  <schema id="org.gnome.shell.extensions.gnome-shell-ext-show-battery" path="/org/gnome/shell/extensions/gnome-shell-ext-show-battery/">
     <key name="show-indicator" type="b">
       <default>true</default>
     </key>

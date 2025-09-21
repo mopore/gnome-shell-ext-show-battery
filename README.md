@@ -7,10 +7,10 @@
                                                                               
 ```
 
-<img width="657" alt="screenhot" src="https://github.com/mopore/gnome-46-shell-ext-show-battery/assets/56848419/75344a59-d96c-4ce2-ab53-929682adebee">
+<img width="657" alt="screenhot" src="https://github.com/mopore/gnome-shell-ext-show-battery/assets/56848419/75344a59-d96c-4ce2-ab53-929682adebee">
 
 This project solves to problem to see the battery level of a MacOS laptop from 
-inside a VM which runs with Gnome 46.
+inside a VM which runs with Gnome 46 or higher.
 
 The project contains of two parts.
 - A Go-based user agent to provide the battery level
@@ -18,7 +18,7 @@ The project contains of two parts.
 
 As of 2024-05 showing the hosts's battery level is not yet supported with 
 UTM/qemu. For the communication a simple file is used which needs to be 
-accessible from both the MacOS host and the Gnome 46 shell.
+accessible from both the MacOS host and the Gnome 46 (or higher) shell.
 
 Per default the file is expected to be at the following location: 
 `/home/jni/arch_share/virt_machine/jni_ext/battery_level_percent.txt`
