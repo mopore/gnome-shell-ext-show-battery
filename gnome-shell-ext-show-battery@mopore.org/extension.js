@@ -90,6 +90,8 @@ export default class ShowBatLevelExtension extends Extension {
     updateLabelWithFileContent() {
         console.debug('Updating label with file content');
         const batInfoPath = this._settings.get_string('bat-info-path');
+        const prefix = this._settings.get_string('text-prefix');
+        const postfix = this._settings.get_string('text-postfix');
 
         try {
             const file = Gio.File.new_for_path(batInfoPath);
@@ -97,9 +99,7 @@ export default class ShowBatLevelExtension extends Extension {
                 try {
                     let [success, contents] = f.load_contents_finish(res);
                     if (success) {
-                        const newText = `${new TextDecoder().decode(contents).trim()}%`;
-                        // TODO Make the pre and postfix configurable
-                        // const newText = `${new TextDecoder().decode(contents).trim()}%`;
+                        const newText = `${prefix}${new TextDecoder().decode(contents).trim()}%${postfix}`;
                         this._buttonMenuLabel.set_text(newText);
                     } else {
                         this._buttonMenuLabel.set_text('n/a');

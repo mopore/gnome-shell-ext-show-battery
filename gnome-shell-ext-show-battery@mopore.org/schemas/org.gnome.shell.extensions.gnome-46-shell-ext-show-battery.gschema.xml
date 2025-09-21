@@ -7,5 +7,11 @@
     <key name="bat-info-path" type="s">
       <default>"/home/jni/arch_share/virt_machine/jni_ext/battery_level_percent.txt"</default>
     </key>
+    <key name="text-prefix" type="s">
+      <default>"pre..."</default>
+    </key>
+    <key name="text-postfix" type="s">
+      <default>"...post"</default>
+    </key>
   </schema>
 </schemalist>

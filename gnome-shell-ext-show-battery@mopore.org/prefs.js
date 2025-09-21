@@ -19,10 +19,20 @@ export default class ExamplePreferences extends ExtensionPreferences {
         });
         page.add(coreGroup);
 
-        const entryRow = new Adw.EntryRow({
+        const pathEntryRow = new Adw.EntryRow({
             title: _('Battery Info Path'),
         });
-        coreGroup.add(entryRow);
+        coreGroup.add(pathEntryRow);
+
+        const prefixEntryRow = new Adw.EntryRow({
+            title: _('Prefix Text'),
+        });
+        coreGroup.add(prefixEntryRow);
+
+        const postfixEntryRow = new Adw.EntryRow({
+            title: _('Postfix Text'),
+        });
+        coreGroup.add(postfixEntryRow);
 
         const appearanceGroup = new Adw.PreferencesGroup({
             title: _('Appearance'),
@@ -43,7 +53,13 @@ export default class ExamplePreferences extends ExtensionPreferences {
         window._settings.bind('show-indicator', switchRow, 'active',
             Gio.SettingsBindFlags.DEFAULT);
 
-        window._settings.bind('bat-info-path', entryRow, 'text',
+        window._settings.bind('bat-info-path', pathEntryRow, 'text',
+            Gio.SettingsBindFlags.DEFAULT);
+
+        window._settings.bind('text-prefix', prefixEntryRow, 'text',
+            Gio.SettingsBindFlags.DEFAULT);
+
+        window._settings.bind('text-postfix', postfixEntryRow, 'text',
             Gio.SettingsBindFlags.DEFAULT);
     }
 }
