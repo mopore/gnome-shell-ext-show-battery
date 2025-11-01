@@ -5,7 +5,8 @@
   "shell-version": [
     "46",
     "47",
-    "48"
+    "48",
+    "49"
   ],
   "url": "https://github.com/mopore/gnome-46-shell-ext-show-battery",
   "gettext-domain": "gnome-46-shell-ext-show-battery@mopore.org",
